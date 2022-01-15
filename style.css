@@ -15,10 +15,27 @@ body{
     background-color: white;
     
 }
+#button {
+    text-decoration: none;
+    padding: 12px;
+    color: white;
+    width: 196px;
+    height: 44px;
+    background-color: #E02C6D;
+    border-radius: 41px;
+    font-size: 14px;
+    border: none;
+    margin-top: 10px;
+ }
+ #button:hover{
+     background-color:#eb14c7de ;
+     transition: .3s ease-out;
+     color: white;
+     border: .5px solid black;
+ }
 .manu-container{
     display: flex;
     justify-content: center;
-    /* height: 94px; */
     
 }
 .logo-manu{
@@ -64,6 +81,11 @@ body{
     height: 24px;
     margin-right: 10px;
 }
+.fa-bars{
+    font-size: 20px;
+    padding-right: 10px;
+     display: none; 
+}
 /*---------------------
  influencer section style
  ----------------------*/
@@ -77,6 +99,7 @@ main{
     width: 1300px;
     margin-top: 150px;
     display: flex;
+
     align-items: center;
     justify-content: space-between;  
  }
@@ -93,17 +116,6 @@ main{
      line-height: 24px;
      margin-top: 20px;
      margin-bottom: 25px;
- }
- #button {
-    text-decoration: none;
-    padding: 12px;
-    padding-right: 26px;
-    color: white;
-    width: 196px;
-    height: 44px;
-    background-color: #E02C6D;
-    border-radius: 41px;
-    font-size: 14px;
  }
  .influencer-img img{
     width: 540px;
@@ -132,6 +144,10 @@ main{
   .company img{
     width: 84px;
     height: 26px;
+  }
+  .company:hover{
+      transform: scale(1.4);
+      transition: transform .2s ease-out;
   }
   /*--------------------
    popular collection style 
@@ -210,13 +226,14 @@ main{
   .fa-arrow-right{
       padding-left: 5px;
   }
+  .collection:hover{
+    transform: scale(1.05);
+    transition: transform .2s ease-out;}
   /*---------------
     Contact us style 
    --------------------*/
-
-
 .contact{ 
-    width: 636px;
+    width: 436px;
     height: 468px;
     background-color: rgba(255, 255, 255, 0.89);
     box-shadow: 10px 20px 25px;
@@ -225,6 +242,12 @@ main{
 form{
     margin: 35px;
     align: center;
+}
+.form-info{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
 }
 .input_fild{
    width: 400px;
@@ -242,14 +265,88 @@ form{
     padding-top: 10px;
 }
 .form-title{
-    font-size: 90px;
+    font-size: 50px;
     text-align: center;
     color: #E02C6D;
     text-shadow: 10px 10px 10px rgb(128, 125, 125);
 }
-.form-info{
+/*-----------------
+ footer section style
+-------------------- */
+footer{
+    width: 100%;
+    height: 239px;
+    background-color: #0A0826
+    ;
+    margin-top: 100px;
+}
+.footer-info{
+    color: white;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
+}
+.footer-info p{
+    color: #D9DBE1;
+} 
+.fab{
+    margin-top: 9px;
+    padding-left: 10px;
+    font-size: 32px;
+    color: white;
+}
+.fab:hover{
+    color:#E02C6D ;
+    transition: .2s ease-out;
+}
+ @media (max-width:1314px) {
+    .influencer{
+        flex-direction: column;
+    }
+    .influencer-info{
+        margin-bottom: 100px;
+        width: 382px;
+        height: 270px;
+    }
+    .influencer-img img{
+        width: 382px;
+        height: 370px;
+        padding-top: 20px;
+        margin-bottom: 50px;
+        background-image: none;
+    }
+} 
+
+@media (max-width:1100px) {
+    .companyes{
+        flex-direction: column;
+        border: none;
+        background-color:white
+    }
+    .company{
+        top: 50px;
+        margin-top: 10px;
+        padding-top: 16px;
+        height: 400px;
+    }
+    .popular-collection{
+        margin-top: 100px;
+    }
+    .collections{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:800px) {
+    .collections{
+        grid-template-columns: repeat(1,1fr);
+       
+}
+.manu-item{
+    display: none; 
+}
+.fa-bars{
+    display: block;
+}
 }
